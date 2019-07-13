@@ -1,0 +1,40 @@
+
+.heart:before,.heart:after {
+  content: "";
+  background-color: red;
+  border-radius: 50%;
+  height: 30px;
+  position: absolute;
+  width: 30px;
+  
+}
+
+.heart {
+  background-color: red;
+  height: 30px;
+  transform: rotate(-45deg);
+  width: 30px;
+  position:absolute;
+  left:50px;
+  top:50px;
+  
+}
+
+.outer{
+  animation: myOrbit 4s linear infinite;
+}
+
+.heart:before{
+  left:0;
+  top:-15px;
+}
+.heart:after{
+  left:15px;
+}
+
+
+
+@keyframes myOrbit {
+    from { transform: rotate(0deg) translateX(50px); }
+    to   { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+}
